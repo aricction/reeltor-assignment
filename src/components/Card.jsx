@@ -28,11 +28,11 @@ const Card = () => {
   return (
     <div style={{ padding: "20px", paddingTop:"100px" , }}>
     
-      <h3 style={{ marginLeft:"-150px"}}>Discover popular properties</h3>
+      <h3 style={{ }}>Discover popular properties</h3>
       {loading ? (
         <p style={{ textAlign: "center" }}>Loading...</p>
       ) : (
-        <div style={{ display: "grid",  gridTemplateColumns: "repeat(4, 1fr)", gap: "10px", justifyContent: "center" }}>
+        <div style={{ display: "grid",  gridTemplateColumns: "repeat(4, 1fr)", gap: "5px", justifyContent: "center" }}>
           {data.map((item, index) => (
             <motion.div key={index} style={{
               
