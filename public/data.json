@@ -1,0 +1,85 @@
+{
+    "real_estate": [
+        {
+            "image": "/images/1.jpg",
+            "name": "Equestrian Family Home",
+            "price": 14000 ,
+            "address":"California City, CA, USA",
+            "bedrooms": 3,
+            "bathrooms": 4,
+            "area": 1200,
+            "featured": true
+        },
+        {
+            "image": "/images/1.jpg",
+            "name": "Equestrian Family Home",
+            "price": 14000 ,
+            "address":"California City, CA, USA",
+            "bedrooms": 3,
+            "bathrooms": 4,
+            "area": 1200
+           
+        },
+        {
+            "image": "/images/1.jpg",
+            "name": "Equestrian Family Home",
+            "price": 14000 ,
+            "address":"California City, CA, USA",
+            "bedrooms": 3,
+            "bathrooms": 4,
+            "area": 1200,
+            "featured": true
+        },
+        {
+            "image": "/images/1.jpg",
+            "name": "Equestrian Family Home",
+            "price": 14000 ,
+            "address":"California City, CA, USA",
+            "bedrooms": 3,
+            "bathrooms": 4,
+            "area": 1200,
+            "featured": true
+        },
+        {
+            "image": "/images/1.jpg",
+            "name": "Equestrian Family Home",
+            "price": 14000 ,
+            "address":"California City, CA, USA",
+            "bedrooms": 3,
+            "bathrooms": 4,
+            "area": 1200,
+            "featured": true
+        },
+        {
+            "image": "/images/1.jpg",
+            "name": "Equestrian Family Home",
+            "price": 14000 ,
+            "address":"California City, CA, USA",
+            "bedrooms": 3,
+            "bathrooms": 4,
+            "area": 1200,
+            "featured": false
+        },
+        {
+            "image": "/images/1.jpg",
+            "name": "Equestrian Family Home",
+            "price": 14000 ,
+            "address":"California City, CA, USA",
+            "bedrooms": 3,
+            "bathrooms": 4,
+            "area": 1200,
+          
+            "sponsored": true
+        },
+        {
+            "image": "/images/1.jpg",
+            "name": "Equestrian Family Home",
+            "price": 14000 ,
+            "address":"California City, CA, USA",
+            "bedrooms": 3,
+            "bathrooms": 4,
+            "area": 1200
+            
+        }
+    ]
+}
