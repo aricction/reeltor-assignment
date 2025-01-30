@@ -1,0 +1,28 @@
+{
+    "nft_data": [
+        {
+           "name":"Roma Avenue",
+           "ether":0.91,
+           "graph":"+10%",
+           "color":"#3ef7ad"
+        },
+        {
+            "name":"Thorian Park",
+           "ether":0.89,
+           "graph":"+19%",
+            "color":"#3ef7ad"
+        },
+        {
+            "name":"Linda Mansion",
+           "ether":1.1,
+           "graph":"-17%",
+             "color":"#f24e82"
+        },
+        {
+            "name":"Villa Mary",
+           "ether":0.71,
+           "graph":"+27%",        
+            "color":"#3ef7ad"
+        }
+    ]
+}

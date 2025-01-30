@@ -1,0 +1,29 @@
+ {
+    "top_picks": [
+        {
+            "name":"Roma Avenue",
+            "price":400.000,
+            "ether": 0.0000345
+        },
+        {
+           "name":"Atlas Shack",
+            "price":500.000,
+            "ether": 0.0000678 
+        },
+        {
+            "name":"Germanrin",
+            "price":786.000,
+            "ether": 0.0000887
+        },
+        {
+            "name":"Heavens",
+            "price":667.000,
+            "ether": 0.0000761
+        },
+        {
+            "name":"Heretho",
+            "price":348.000,
+            "ether": 0.0000302
+        }
+    ]
+ }

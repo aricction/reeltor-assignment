@@ -1,20 +1,16 @@
 import { PiBellSimple } from "react-icons/pi";
+import DarkMode from "./darkmode"; 
 
-const Navbar = () => {
+const Navbar = ({ isDark, toggleDarkMode }) => {
   return (
     <div
-      style={{
-        width: "100%",
-        padding: "10px",
-        height: "60px",
-        boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.1)",
-        display: "flex",
-        justifyContent: "space-between", 
-        alignItems: "center", 
-      }}
+      className={`w-full h-16 px-4 flex items-center justify-between shadow-md 
+        ${isDark ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`
+      }
     >
-      <h2 style={{ color: "grey", margin: "0" }}>Dashboard</h2>
-      <div style={{ padding: "10px" }}>
+      <h2 className="m-0 text-lg sm:text-xl font-semibold">Dashboard</h2>
+      <DarkMode isDark={isDark} toggleDarkMode={toggleDarkMode} />
+      <div className="p-2">
         <PiBellSimple size={20} />
       </div>
     </div>

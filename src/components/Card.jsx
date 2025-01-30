@@ -4,10 +4,12 @@ import { FaShower } from "react-icons/fa6";
 import { LuSquareArrowOutUpRight } from "react-icons/lu";
 import { GiElectric } from "react-icons/gi";
 import { motion } from "framer-motion";
+import { useRef } from "react";
 
 const Card = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const scrollRef = useRef(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,90 +28,63 @@ const Card = () => {
   }, []);
 
   return (
-    <div style={{ padding: "20px", paddingTop:"100px" , }}>
-    
-      <h3 style={{ }}>Discover popular properties</h3>
+    <div ref={scrollRef}
+    style={{ overflowY: "auto", maxHeight: "100vh" }}
+    className="p-5 pt-10">
+      <h3 className="text-lg font-semibold">Discover popular properties</h3>
       {loading ? (
-        <p style={{ textAlign: "center" }}>Loading...</p>
+        <p className="text-center">Loading...</p>
       ) : (
-        <div style={{ display: "grid",  gridTemplateColumns: "repeat(4, 1fr)", gap: "5px", justifyContent: "center" }}>
+        <div  
+        className=" grid h-56grid-cols-3 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {data.map((item, index) => (
-            <motion.div key={index} style={{
-              
-              borderRadius: "10px",
-              padding: "15px",
-              width: "310px",
-            
+            <motion.div 
+              key={index} 
+              className="relative rounded-lg p-4 w-[310px] "
+              whileHover={{ scale: 1.1 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}  
 
-            }}
-             whileHover={{scale:1.1}} >
+              
+            >
               {item.featured && (
-
-                <div style=
-                {{
-                  position:"absolute",
-                  backgroundColor:"#654afe",
-                  width:"120px",
-                  height:"45px",
-                  borderRadius:"14px",
-                  margin:"15px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center" ,
-                  zIndex:"1"}}>   
-              <p>
-
-              <GiElectric color="white" size={20}/>
-                 
-                <strong style={{color:"white"}}>FEATURED</strong> 
-                {item.featured}</p>
-              </div>
-              
-            )}
-              {item.sponsored && (
-                <div style={{
-                  position:"absolute",
-                  backgroundColor:"#ff86a4",
-                  width:"120px",
-                  height:"45px",
-                  borderRadius:"14px",
-                  margin:"15px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center" ,
-                  zIndex:"1"
-                  
-                }}>
-                 <GiElectric color="white" size={20}/>
-                   <strong style={{color:"white", marginLeft: "5px"}}>Sponsored</strong> 
+                <div className="absolute bg-purple-600 text-white flex items-center justify-center w-28 h-11 rounded-lg top-7 left-7 z-10 p-2">
+                  <GiElectric size={25} />
+                  <strong>FEATURED</strong>
                 </div>
               )}
-              <img src={item.image}
-              alt={item.name}
-              style={{
-                width:"100%",
-                height:"250px",
-                objectFit:"cover",
-                borderRadius:"15px"
-              }}/>
-              
-              <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "start", gap: "10px" }}>
-  <h2 style={{ margin: "0", paddingTop: "12px" }}>${item.price.toLocaleString()} / mo</h2>
-  <h3 style={{ margin: "0", padding: "0" }}>{item.name}</h3>
-  <p style={{ margin: "0", padding: "0", color:"gray" }}>{item.address}</p>
-</div>
-
-             
-              <div style={{ display: "flex", alignItems: "center", space:"20px",gap: "15px",justifyContent: "start" }}>
-                <IoBedOutline color="black" size={20} />
-                <p>{item.bedrooms} bed</p>
-                <FaShower color="black" size={15} />
-                <p>{item.bathrooms} bath</p>
-                <LuSquareArrowOutUpRight color="black" size={15}/>
-                <p>{item.area} sqft</p>
+              {item.sponsored && (
+                <div className="absolute bg-pink-500 text-white flex items-center justify-center w-28 h-11 rounded-lg top-7 left-7 z-10 p-2">
+                  <GiElectric  size={25} />
+                  <strong>Sponsored</strong>
+                </div>
+              )}
+              <img 
+                src={item.image} 
+                alt={item.name} 
+                className="w-full h-64 object-cover rounded-lg" 
+              />
+              <div className="flex flex-col gap-1 mt-3">
+                <h2 className="text-lg font-semibold">${item.price.toLocaleString()} / mo</h2>
+                <h3 className="text-md font-medium">{item.name}</h3>
+                <p className="text-gray-500 text-sm">{item.address}</p>
               </div>
-
-              
+              <div className="flex items-center gap-4 mt-3 text-sm">
+                <div className="flex items-center gap-1">
+                  <IoBedOutline size={20} />
+                  <p>{item.bedrooms} bed</p>
+                </div>
+                <div className="flex items-center gap-1">
+                  <FaShower size={15} />
+                  <p>{item.bathrooms} bath</p>
+                </div>
+                <div className="flex items-center gap-1">
+                  <LuSquareArrowOutUpRight size={15} />
+                  <p>{item.area} sqft</p>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

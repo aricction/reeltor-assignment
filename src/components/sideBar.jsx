@@ -5,36 +5,42 @@ import { FaRegCalendarCheck } from "react-icons/fa";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaPowerOff } from "react-icons/fa6";
 import { PiSpeedometerFill } from "react-icons/pi";
+import { Link } from "react-router-dom";
 
-const SideBar = () => {
+const SideBar = ({ isDark }) => {
   return (
-    <>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.1)",
-          gap: "45px",
-          padding: "15px",
-          height: "100%",
-          width: "80px",
-          justifyContent: "center",
-          alignItems: "center",
-         
-        }}
-      >
-        <PiSpeedometerFill size={20} color="purple" />
-        <RiHome5Line size={20} color="grey" />
-        <FiPieChart size={20} color="grey" />
-        <LiaToolboxSolid size={20} color="grey" />
-        <FaRegCalendarCheck size={19} color="grey" />
-        <IoSettingsOutline size={20} color="gray" />
+    <div
+      className={`flex flex-col items-center gap-11 p-4 h-screen h-[999px] w-20 shadow-md 
+        ${isDark ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`
+      }
+    >
+      <PiSpeedometerFill size={20} className={`${isDark ? 'text-white' : 'text-purple-600'}`} />
 
-        <div style={{ bottom: "150px", color: "purple", marginTop: "200px" }}>
-          <FaPowerOff />
-        </div>
+    
+      <Link to="/cards">
+        <RiHome5Line size={20} className={`cursor-pointer hover:text-purple-600 ${isDark ? 'text-white' : 'text-gray-500'}`} />
+      </Link>
+
+      <Link to="/stats">
+        <FiPieChart size={20} className={`cursor-pointer hover:text-purple-600 ${isDark ? 'text-white' : 'text-gray-500'}`} />
+      </Link>
+
+      <Link to="">
+        <LiaToolboxSolid size={20} className={`cursor-pointer hover:text-purple-600 ${isDark ? 'text-white' : 'text-gray-500'}`} />
+      </Link>
+
+      <Link to="">
+        <FaRegCalendarCheck size={19} className={`cursor-pointer hover:text-purple-600 ${isDark ? 'text-white' : 'text-gray-500'}`} />
+      </Link>
+
+      <Link to="">
+        <IoSettingsOutline size={20} className={`cursor-pointer hover:text-purple-600 ${isDark ? 'text-white' : 'text-gray-500'}`} />
+      </Link>
+
+      <div className={`${isDark ? 'text-white' : 'text-purple-600'} mt-24`}>
+        <FaPowerOff size={20} />
       </div>
-    </>
+    </div>
   );
 };
 

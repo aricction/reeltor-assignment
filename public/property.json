@@ -1,0 +1,29 @@
+{
+    "property_data": [
+        {
+            "image":"./images/1.jpg",
+            "name":"Mandragora Mansion",
+            "ether":0.005
+        },
+        {
+           "image":"./images/1.jpg",
+            "name":"Halbert Avenue ",
+            "ether":0.076
+        },
+        {
+            "image":"./images/1.jpg",
+            "name":"Roma Avenue",
+            "ether":0.034
+        },
+        {
+            "image":"./images/1.jpg",
+            "name":"Altas Shack",
+            "ether":0.067
+        },
+        {
+            "image":"./images/1.jpg",
+            "name":"Linda Mansion",
+            "ether":0.011
+        }
+    ]
+}
