@@ -9,13 +9,12 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 
 const StatsPage = ({isDark}) => {
+    
    const scrollRef = useRef(null);
     return (
-        <div
-        
+        <div  
         ref={scrollRef}
-        style={{ overflowY: "auto", maxHeight: "100vh" }}
-      >
+        style={{ overflowY: "auto", maxHeight: "100vh" }}>
 
    
     <motion.div 
@@ -39,10 +38,10 @@ const StatsPage = ({isDark}) => {
             <h2 className="text-xl font-semibold ml-6">Investment stats</h2>
             <BsThreeDots />
           </div>
-          <Stats />
+          <Stats isDark={isDark}/>
         </div>
 
-        <div className="ml-32 z-13 bg-white-400 col-span-1 row-span-2">
+        <div className="ml-32 z-13 col-span-1 row-span-2">
           <MyCard isDark={isDark} />
         </div>
       </div>
@@ -55,18 +54,18 @@ const StatsPage = ({isDark}) => {
             <p className="font-bold text-xl ml-4">NFTs Owned</p>
             <BsThreeDots className="grid" />
           </div>
-          <Nft />
+          <Nft isDark={isDark}/>
         </div>
 
         {/* Second div (top right) */}
         <div className="ml-20 mt-24 col-span-2 row-span">
           <p className="font-bold text-xl ml-7">My Portfolio</p>
-          <Slider />
+          <Slider isDark={isDark}/>
         </div>
 
         {/* Third div (distributions section) */}
         <div className="ml-28 mt-16 col-span-4 row-span-2">
-          <Distributions />
+          <Distributions isDark={isDark} />
         </div>
       </div>
     </motion.div>

@@ -51,7 +51,7 @@ const Stats = () => {
   };
 
   return (
-    <div className="flex items-start justify-start gap-8 p-3 w-[580px] h-[300px] mt-10 bg-gray-50  dark:bg-dark-100 rounded-lg shadow-lg">
+    <div className="flex items-start justify-start gap-8 p-3 w-[580px] h-[300px] mt-10 bg-light-50 dark:bg-dark-200 rounded-lg shadow-lg">
       <div className="flex flex-col items-start justify-start gap-3 ml-3">
         {[
           {

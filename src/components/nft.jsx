@@ -34,27 +34,29 @@ const Nft = () => {
   }
 
   return (
-    <div className=" " >
-        <ul>
-
-      {data.map((item, index) => (
-          <div key={index} className="flex flex-col bg-white shadow-md w-[280px] h-[90px] rounded-lg m-4 p-1">
-            <p className="text-lg p-2 ">
-            {item.name}
+    <div>
+      <ul>
+        {data.map((item, index) => (
+          <div
+            key={index}
+            className={"flex flex-col w-[280px] h-[90px] rounded-lg m-4 p-1 bg-light-50 dark:bg-dark-200 shadow-md"}
+          >
+            <p className={`text-lg p-2 `}>
+              {item.name}
             </p>
             <div className="flex items-center">
-
-            <FaEthereum />
-            <p className="text-2xl font-bold">
-          
-                {item.ether} Ether</p>
-            <p className="ml-20 text-lg " style={{color:item.color}}>
+              <FaEthereum />
+              <p className="text-2xl font-bold">{item.ether} Ether</p>
+              <p
+                className="ml-20 text-lg"
+                style={{ color: item.color }}
+              >
                 {item.graph}
-            </p>
+              </p>
             </div>
-            </div>
+          </div>
         ))}
-    </ul>
+      </ul>
     </div>
   );
 };

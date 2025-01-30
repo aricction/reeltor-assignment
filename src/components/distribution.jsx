@@ -69,7 +69,7 @@ const Distributions = () => {
   };
 
   return (
-    <div className="mt-2 bg-white shadow-md w-[700px] rounded-xl h-[280px]">
+    <div className="mt-2 bg-light-50 dark:bg-dark-200 shadow-md w-[700px] rounded-xl h-[280px] ">
      <div className=" ml-3">
      <p className="text-xl p-4 font-semibold">Total Distributions</p>
      </div>
