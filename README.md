@@ -3,6 +3,8 @@
 ## Overview
 This project is a simple React-based dashboard that displays various statistics about NFTs. It includes a bar chart that visualizes data and several informational panels that highlight key NFT metrics such as "Total Investment", "Weekly Returns", and "Expenses". The data is dynamically fetched from a JSON file.
 
+## public link 
+- https://nft-dashboard-1.netlify.app/
 ## Features
 - **Dark Mode Support**: Uses Tailwind CSS's darkMode: 'class' for theme switching.
 - **Dynamic Data Fetching**: Fetches data from .json files and displays a list of data.

@@ -47,19 +47,17 @@ const Slider = () => {
 
   return (
     <div className="relative flex items-center justify-center  mt-16 ml-96">
-       <button onClick={prevSlide} className="absolute left-0 bg-gray-200 p-2 z-10 rounded-full">
-        <GrFormPrevious size={24} />
-      </button>
-      <div className="absolute w-[710px] overflow-hidden border-l-2 border-r-2 border-gray-300">
+      
+      <div className="absolute w-[700px] overflow-hidden border-l-2 border-r-2 border-gray-300">
         <motion.div
           className="flex space-x-4 "
-          animate={{ x: -currentIndex * 260 }}
+          animate={{ x: -currentIndex * 300 }}
           transition={{ type: "spring", stiffness: 70 }}
         >
-          {data.slice(currentIndex, currentIndex + 2).map((item, index) => (
+          {data.slice(currentIndex, currentIndex + 3).map((item, index) => (
             <div
               key={index}
-              className="border-2 border-solid shadow-md w-[250px] h-[80px] rounded-lg p-2 bg-light-50 dark:bg-dark-200 flex items-center"
+              className="border-2 border-solid shadow-md w-[260px] h-[80px] rounded-lg p-2 bg-light-50 dark:bg-dark-200 flex items-center"
             >
               <img src={item.image} className="w-[60px] h-[60px] rounded-xl" />
               <div className="ml-4 flex flex-col">
@@ -74,11 +72,14 @@ const Slider = () => {
         </motion.div>
       </div>
 
-    
-    
+    {/* <div className="ml-12">
+      <button onClick={prevSlide} className="absolute left-0 bg-gray-200 p-2 z-10 rounded-full">
+        <GrFormPrevious size={24} />
+      </button>
       <button onClick={nextSlide} className="absolute right-0 bg-gray-200 p-2 rounded-full">
         <MdNavigateNext size={24} />
       </button>
+    </div> */}
     </div>
   );
 };

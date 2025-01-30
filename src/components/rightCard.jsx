@@ -23,7 +23,7 @@ const MyCard = () => {
   }, []);
 
   return (
-    <div className="shadow-md w-[370px] p-8 h-screen h-[1000px] transition-all  dark:bg-dark-300 ">
+    <div className="shadow-md w-[370px] p-8  h-[1000px] transition-all  dark:bg-dark-300 ">
       <h3 className="text-xl font-semibold m-2">My Cards</h3>
 
       {/* Balance Card */}
