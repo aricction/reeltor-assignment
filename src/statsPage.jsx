@@ -35,7 +35,7 @@ const StatsPage = ({isDark}) => {
 
         <div className="z-10 col-span-1">
           <div className="flex flex-cols justify-between items-center">
-            <h2 className="text-xl font-semibold ml-6">Investment stats</h2>
+            <h2 className="text-xl font-semibold ml-6">Investment Stats</h2>
             <BsThreeDots />
           </div>
           <Stats isDark={isDark}/>

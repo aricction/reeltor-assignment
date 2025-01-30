@@ -46,7 +46,6 @@ const Card = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}  
-
               
             >
               {item.featured && (
