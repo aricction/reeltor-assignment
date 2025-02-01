@@ -46,25 +46,25 @@ const Slider = () => {
   };
 
   return (
-    <div className="relative flex items-center justify-center  mt-16 ml-96">
+    <div className="relative flex items-center justify-center lg:mt-1 lg:ml-64 sm:mt-12">
       
-      <div className="absolute w-[700px] overflow-hidden border-l-2 border-r-2 border-gray-300">
+      <div className="absolute lg:w-[700px] sm:w-[140%] sm:overflow-hidden border-l-2 border-r-2 border-gray-300">
         <motion.div
-          className="flex space-x-4 "
+          className="flex space-x-4 sm:flex-cols-2 "
           animate={{ x: -currentIndex * 300 }}
           transition={{ type: "spring", stiffness: 70 }}
         >
           {data.slice(currentIndex, currentIndex + 3).map((item, index) => (
             <div
               key={index}
-              className="border-2 border-solid shadow-md w-[260px] h-[80px] rounded-lg p-2 bg-light-50 dark:bg-dark-200 flex items-center"
+              className="border-2 border-solid shadow-md w-[260px] h-[80px] rounded-lg p-2 bg-white dark:bg-dark-200 flex items-center"
             >
               <img src={item.image} className="w-[60px] h-[60px] rounded-xl" />
               <div className="ml-4 flex flex-col">
-                <p className="text-m font-semibold">{item.name}</p>
+                <p className="lg:text-m sm:text-[15px] font-semibold">{item.name}</p>
                 <div className="flex items-center">
                   <FaEthereum color="gray" />
-                  <p className="text-lg font-semibold text-gray-500">{item.ether} Ether</p>
+                  <p className="lg:text-lg font-semibold text-gray-500">{item.ether} Ether</p>
                 </div>
               </div>
             </div>

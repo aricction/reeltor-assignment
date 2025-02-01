@@ -39,7 +39,7 @@ const Nft = () => {
         {data.map((item, index) => (
           <div
             key={index}
-            className={"flex flex-col w-[280px] h-[90px] rounded-lg m-4 p-1 bg-light-50 dark:bg-dark-200 shadow-md"}
+            className={"flex flex-col lg:w-[280px] h-[90px] rounded-lg m-4 pl-4 bg-white dark:bg-dark-200 shadow-md ml-1"}
           >
             <p className={`text-lg p-2 `}>
               {item.name}
@@ -48,7 +48,7 @@ const Nft = () => {
               <FaEthereum />
               <p className="text-2xl font-bold">{item.ether} Ether</p>
               <p
-                className="ml-20 text-lg"
+                className="lg:ml-20 sm:ml-52 text-lg"
                 style={{ color: item.color }}
               >
                 {item.graph}

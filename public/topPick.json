@@ -3,27 +3,32 @@
         {
             "name":"Roma Avenue",
             "price":400.000,
-            "ether": 0.0000345
+            "ether": 0.0000345,
+            "color": "red"
         },
         {
            "name":"Atlas Shack",
             "price":500.000,
-            "ether": 0.0000678 
+            "ether": 0.0000678,
+            "color": "yellow"
         },
         {
             "name":"Germanrin",
             "price":786.000,
-            "ether": 0.0000887
+            "ether": 0.0000887,
+             "color": "green"
         },
         {
             "name":"Heavens",
             "price":667.000,
-            "ether": 0.0000761
+            "ether": 0.0000761,
+             "color": "yellow"
         },
         {
             "name":"Heretho",
             "price":348.000,
-            "ether": 0.0000302
+            "ether": 0.0000302,
+             "color": "red"
         }
     ]
  }

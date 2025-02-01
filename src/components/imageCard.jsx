@@ -16,7 +16,7 @@ const ImageCard = () => {
   };
 
   return (
-    <div className="w-[400px] h-[300px] m-10  shadow-md rounded-xl overflow-hidden relative ">
+    <div className="lg:w-[400px] h-[300px] sm:w-[490px] m-10  shadow-md rounded-xl overflow-hidden relative sm:ml-1 ">
         <p className="absolute bottom-[60px] left-4 text-xl text-white ">House Andromeda</p>
 
       <div className="absolute flex gap-2 m-2 items-center justify-center">

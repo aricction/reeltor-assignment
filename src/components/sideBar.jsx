@@ -9,12 +9,11 @@ import { Link } from "react-router-dom";
 
 const SideBar = ({ isDark }) => {
   return (
+    <div className="relative" >
+
     <div
-      className={`flex flex-col items-center gap-11 p-4 h-screen h-[999px] w-20 shadow-md 
-        ${isDark ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`
-      }
-    >
-      <PiSpeedometerFill size={20} className={`${isDark ? 'text-white' : 'text-purple-600'}`} />
+      className="flex flex-col items-center gap-11 p-4 h-screen h-[999px] w-20 shadow-md bg-white ">
+      <PiSpeedometerFill size={20} className="text-purple-700" />
 
     
       <Link to="/cards">
@@ -41,6 +40,7 @@ const SideBar = ({ isDark }) => {
         <FaPowerOff size={20} />
       </div>
     </div>
+  </div>
   );
 };
 
