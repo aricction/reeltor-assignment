@@ -51,7 +51,7 @@ const Stats = () => {
   };
 
   return (
-    <div className="flex items-start justify-start gap-4 p-3 lg:w-[580px] h-[300px] sm:w-[100%] mt-10 bg-white dark:bg-gray-900  dark:text-white rounded-lg shadow-lg">
+    <div className="flex items-start justify-start gap-4 p-3 lg:w-[580px] h-[300px] sm:w-[100%] mt-10 bg-white rounded-lg shadow-lg">
       <div className="flex flex-col items-start justify-start gap-3 ml-3">
         {[
           {
@@ -82,10 +82,10 @@ const Stats = () => {
               <div className={`w-20 h-20 ${item.bgColor} flex justify-center items-center rounded-lg`}>
                 <IconComponent size={30} color="white" />
               </div>
-              <div className="ml-4 lg:h-[70px] sm:h-[50px] lg:grid sm:flex text-left">
+              <div className="ml-4 h-[70px] sm:h-[50px] lg:grid sm:flex text-left">
                 <h3 className="mb-1 lg:text-lg sm:text-[15px] font-semibold">{item.label}</h3>
-                <div className="flex items-center gap-2 justify-end">
-                  <FaEthereum size={30} style={{ color: item.color }} />
+                <div className="lg:flex items-center gap-2 justify-end">
+                  <FaEthereum lg:size={30} sm:size={10} style={{ color: item.color }} />
                   <h2 className="lg:text-xl sm:text-[15px] font-bold" style={{ color: item.color }}>
                     {item.value}
                   </h2>

@@ -3,7 +3,7 @@ import DarkMode from "./darkMode";
 
 const Navbar = ({ darkMode, handleDarkMode }) => {
   return (
-    <div className="w-full h-16 px-4 flex items-center justify-between shadow-md bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+    <div className="w-full left-0 h-16 px-4 flex items-center justify-between shadow-md bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
       <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white">Dashboard</h2>
       
       <div className="flex items-center space-x-4">

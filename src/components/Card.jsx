@@ -36,11 +36,11 @@ const Card = () => {
         <p className="text-center">Loading...</p>
       ) : (
         <div  
-        className=" grid h-full grid-cols-3 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        className=" grid h-full lg:grid-cols-3   gap-1">
           {data.map((item, index) => (
             <motion.div 
               key={index} 
-              className="relative rounded-lg p-4 lg:w-[310px] "
+              className="relative rounded-lg p-4 lg:w-[410px] "
               whileHover={{ scale: 1.1 }}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}

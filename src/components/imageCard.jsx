@@ -16,8 +16,8 @@ const ImageCard = () => {
   };
 
   return (
-    <div className="lg:w-[400px] h-[300px] sm:w-[490px] m-10  shadow-md rounded-xl overflow-hidden relative sm:ml-1 ">
-        <p className="absolute bottom-[60px] left-4 text-xl text-white ">House Andromeda</p>
+    <div className="lg:w-[490px] h-[300px] sm:w-[100%] m-10  shadow-md rounded-xl overflow-hidden relative sm:ml-1 ">
+        <p className="absolute bottom-[60px] left-4 lg:text-xl text-white  ">House Andromeda</p>
 
       <div className="absolute flex gap-2 m-2 items-center justify-center">
   <div className="text-white rounded-lg bg-gray-400 w-20 text-center ">
@@ -28,7 +28,7 @@ const ImageCard = () => {
   </p>
 </div>
 
-      <div className="absolute flex items-center bottom-9 left-[120px]  transform -translate-x-1/2 z-10 flex justify-center space-x-1">
+      <div className="absolute flex items-center bottom-9 left-[120px] top-32 transform -translate-x-1/2 z-10 flex justify-center space-x-1">
       <FaEthereum color="white" />
       <p className="text-white ">  
       1.44 Ether

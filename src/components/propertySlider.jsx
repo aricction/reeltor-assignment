@@ -46,11 +46,11 @@ const Slider = () => {
   };
 
   return (
-    <div className="relative flex items-center justify-center lg:mt-1 lg:ml-64 sm:mt-12">
-      
-      <div className="absolute lg:w-[700px] sm:w-[140%] sm:overflow-hidden border-l-2 border-r-2 border-gray-300">
+    <div className="relative flex items-center justify-center lg:mt-1 lg:ml-64 mt-2 sm:mt-12">
+      {/* Carousel for large screens */}
+      <div className="hidden sm:flex absolute lg:w-[700px] w-[50%] overflow-hidden border-l-2 border-r-2 border-gray-300">
         <motion.div
-          className="flex space-x-4 sm:flex-cols-2 "
+          className="flex space-x-4"
           animate={{ x: -currentIndex * 300 }}
           transition={{ type: "spring", stiffness: 70 }}
         >
@@ -59,9 +59,9 @@ const Slider = () => {
               key={index}
               className="border-2 border-solid shadow-md w-[260px] h-[80px] rounded-lg p-2 bg-white dark:bg-dark-200 flex items-center"
             >
-              <img src={item.image} className="w-[60px] h-[60px] rounded-xl" />
+              <img src={item.image} className="w-[60px] h-[60px] rounded-xl" alt={item.name} />
               <div className="ml-4 flex flex-col">
-                <p className="lg:text-m sm:text-[15px] font-semibold">{item.name}</p>
+                <p className="text-m font-semibold">{item.name}</p>
                 <div className="flex items-center">
                   <FaEthereum color="gray" />
                   <p className="lg:text-lg font-semibold text-gray-500">{item.ether} Ether</p>
@@ -72,14 +72,32 @@ const Slider = () => {
         </motion.div>
       </div>
 
-    {/* <div className="ml-12">
-      <button onClick={prevSlide} className="absolute left-0 bg-gray-200 p-2 z-10 rounded-full">
+      {/* List view for small screens */}
+      <div className="sm:hidden flex flex-col space-y-4 w-full px-4">
+        {data.map((item, index) => (
+          <div
+            key={index}
+            className="border-2 border-solid shadow-md w-full h-[80px] rounded-lg p-2 bg-white dark:bg-dark-200 flex items-center"
+          >
+            <img src={item.image} className="w-[60px] h-[60px] rounded-xl" alt={item.name} />
+            <div className="ml-4 flex flex-col">
+              <p className="text-m font-semibold">{item.name}</p>
+              <div className="flex items-center">
+                <FaEthereum color="gray" />
+                <p className="lg:text-lg font-semibold text-gray-500">{item.ether} Ether</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Navigation Buttons */}
+      <button onClick={prevSlide} className="hidden sm:block absolute left-0 bg-gray-200 p-2 z-10 rounded-full">
         <GrFormPrevious size={24} />
       </button>
-      <button onClick={nextSlide} className="absolute right-0 bg-gray-200 p-2 rounded-full">
+      <button onClick={nextSlide} className="hidden sm:block absolute right-0 bg-gray-200 p-2 rounded-full">
         <MdNavigateNext size={24} />
       </button>
-    </div> */}
     </div>
   );
 };

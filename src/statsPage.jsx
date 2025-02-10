@@ -16,7 +16,7 @@ const StatsPage = () => {
     <div
       ref={scrollRef}
       style={{ overflowY: "auto", maxHeight: "100vh" }}
-      className="p-4"
+      className="p-2 items-center"
     >
       <motion.div
         initial={{ opacity: 0 }}
@@ -39,9 +39,9 @@ const StatsPage = () => {
           </div>
 
           {/* Investment Stats */}
-          <div className="col-span-1  rounded-lg sm:mt-12 lg:mt-0 ">
+          <div className="h-full col-span-1  rounded-lg sm:mt-32 mt-16 lg:mt-0  ">
             <div className="flex justify-between items-center">
-              <h2 className="text-xl font-semibold ">Investment Stats</h2>
+              <h2 className="text-xl font-semibold  ">Investment Stats</h2>
               <BsThreeDots className="" />
             </div>
             {/* Placeholder content */}
@@ -75,14 +75,14 @@ const StatsPage = () => {
           </div>
 
           {/* My Portfolio Section */}
-          <div className="grid lg:grid-cols-2 sm:grid-cols-2 lg:col-span-3 gap-4">
-            <div className=" col-span-1 sm:mt-36 lg:mt-0 sm:col-span-2 lg:grid-cols-3 p-4 rounded-lg">
-              <div className="flex justify-between items-center lg:ml-20">
+          <div className="lg:grid-cols-2 sm:grid-cols-2 lg:col-span-3 gap-4">
+            <div className="f col-span-1 sm:mt-36 mt-32 lg:mt-0 sm:col-span-2 lg:grid-cols-3 p-4 rounded-lg">
                 <p className="font-bold text-xl ">My Portfolio</p>
+              <div className="flex justify-between items-center lg:ml-20">
                 <BsThreeDots className="text-white" />
               </div>
               {/* Placeholder content */}
-              <div className="  lg:mt-12 h-18 rounded-lg">
+              <div className=" lg:mt-12 h-18 rounded-lg">
                <Slider />
               </div>
             </div>
@@ -104,7 +104,7 @@ const StatsPage = () => {
           <div className="col-span-1 sm:col-span-1 lg:col-span-2 p-4 rounded-lg">
               <div className="flex justify-between items-center">
                 <p className="font-bold text-xl lg:ml-36">Top Picks</p>
-                <BsThreeDots className="text-white" />
+                <BsThreeDots className="" />
               </div>
               <div className=" h-64 rounded-lg">
               <TopPicks />
